@@ -3,16 +3,14 @@ layout:     post
 title:      "start write with vim"
 subtitle:   " "
 date:       2017-10-16
-author:     "web"
+author:     "ian"
 header-img: "img/post-bg-js-version.jpg"
 tags:
     - 工具
-		- vim
+    - vim
 ---
 
-最近配置了 Github Pages 试试看写博客，记录下 使用过程中遇到的一些问题
-
----
+> 最近配置了 Github Pages 试试看写博客，记录下 使用过程中遇到的一些问题
 
 ## Q: MacOs 自带的 vim 不支持 `"+y` 等系统寄存器，无法复制到系统剪切板
 
