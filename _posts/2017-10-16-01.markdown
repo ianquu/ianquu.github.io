@@ -29,11 +29,11 @@ tags:
 
 ## Q: markdown 插件
 
-1. 安装 vim 插件管理器 Vundle
+1、安装 vim 插件管理器 Vundle
 
 `git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
 
-2. 配置 ~/.vimrc
+2、配置 ~/.vimrc
 
 > 
 	set nocompatible    " be iMproved, required
@@ -61,17 +61,17 @@ tags:
 	" h: vundle - 获取帮助
 
 
-3.  进入 vim，执行下面的命令
+3、进入 vim，执行下面的命令
 
 `:PluginInstall`
 
 窗口将会分裂，等待安装，Done 之后关闭
 
-4.  安装 instant-markdown-d, 需要 nodejs 和 npm
+4、安装 instant-markdown-d, 需要 nodejs 和 npm
 
 `npm -g install instant-markdown-d`
 
-4.  安装 Markdown 插件
+5、安装 Markdown 插件
 
 ~/.vimrc
 >
