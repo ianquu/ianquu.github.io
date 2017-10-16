@@ -7,7 +7,7 @@ author:     "web"
 header-img: "img/post-bg-js-version.jpg"
 tags:
     - 工具
-    - vim
+		- vim
 ---
 
 最近配置了 Github Pages 试试看写博客，记录下 使用过程中遇到的一些问题
@@ -22,12 +22,10 @@ tags:
 1、`brew install macvim --with-override-system-vim`
 使用 macvim 替换系统自带 vim，但是测试没有成功，似乎需要关闭系统文件保护
 
-2、`alias vim='mvim -v'`
-使用 brew 安装 macvim，然后设置 alias
-`
-brew install macvim --with-override-system-vim
-alias vim='mvim -v'
-`
+2、使用 brew 安装 macvim，然后设置 alias
+`brew install macvim`
+`alias vim='mvim -v'`
+
 3、`brew install vim`
 使用 brew 安装的 vim 可以操作系统剪切板
 
@@ -39,32 +37,31 @@ alias vim='mvim -v'
 
 2. 配置 ~/.vimrc
 
-`
-set nocompatible    " be iMproved, required
-filetype off " required
+> 
+	set nocompatible    " be iMproved, required
+	filetype off " required
 
-" 启用vundle来管理vim插件
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" 安装插件写在这之后
+	" 启用vundle来管理vim插件
+	set rtp+=~/.vim/bundle/Vundle.vim
+	call vundle#begin()
+	" 安装插件写在这之后
+	
+	" let Vundle manage Vundle, required
+	Plugin 'VundleVim/Vundle.vim'
 
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+	" 安装插件写在这之前
+	call vundle#end() " required
+	filetype plugin on 
+	
+	" required" 常用命令
+	" :PluginList - 查看已经安装的插件
+	" :PluginInstall - 安装插件
+	" :PluginUpdate - 更新插件
+	" :PluginSearch - 搜索插件，例如 :PluginSearch xml就能搜到xml相关的插件
+	" :PluginClean - 删除插件，把安装插件对应行删除，然后执行这个命令即可
 
-" 安装插件写在这之前
-call vundle#end() " required
-filetype plugin on 
+	" h: vundle - 获取帮助
 
-" required" 常用命令
-" :PluginList - 查看已经安装的插件
-" :PluginInstall - 安装插件
-" :PluginUpdate - 更新插件
-" :PluginSearch - 搜索插件，例如 :PluginSearch xml就能搜到xml相关的插件
-" :PluginClean - 删除插件，把安装插件对应行删除，然后执行这个命令即可
-
-" h: vundle - 获取帮助
-
-`
 
 3.  进入 vim，执行下面的命令
 
@@ -79,11 +76,11 @@ filetype plugin on
 4.  安装 Markdown 插件
 
 ~/.vimrc
-`
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'suan/vim-instant-markdown'
-`
+>
+	Plugin 'godlygeek/tabular'
+	Plugin 'plasticboy/vim-markdown'
+	Plugin 'suan/vim-instant-markdown'
+
 最后进入 vim 执行 `:PluginInstall`,  等待完成
 
 重新用 vim 打开 markdown 文件，可以发现浏览器已经自动打开预览页面, 试试编辑文件，浏览器页面会自动更新预览
